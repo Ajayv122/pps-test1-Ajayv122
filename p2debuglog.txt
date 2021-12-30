@@ -1,0 +1,61 @@
+(gdb) b main
+Breakpoint 1 at 0x7c5: file p2original.c, line 24.
+(gdb) r
+Starting program: /home/runner/pps-test1-Muhammadthameem-14/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:24
+24    a = input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5   printf("Enter the number");
+(gdb) n
+6   scanf("%d",&a);
+(gdb) n
+Enter the number2
+7   return a;
+(gdb) 2
+Undefined command: "2".  Try "help".
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:25
+25    b = input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5   printf("Enter the number");
+(gdb) n
+6   scanf("%d",&a);
+(gdb) n
+Enter the number2
+7   return a;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:26
+26    sum = add( a, b);
+(gdb) s
+add (a=2, b=2) at p2original.c:13
+13    sum=a+b;
+(gdb) n
+14    return sum;
+(gdb) n
+15  }
+(gdb) n
+main () at p2original.c:27
+27   output( a, b, sum);
+(gdb) s
+output (a=2, b=2, sum=4) at p2original.c:18
+18    printf("sum of %d + %d is %d",a,b,sum);
+(gdb) n
+20  }
+(gdb) n
+main () at p2original.c:28
+28    return 0;
+(gdb) n
+30  }
+(gdb) n
