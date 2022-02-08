@@ -62,4 +62,4 @@ int main()
     ans=cmp(a,b);
     output(a,b,ans);
     return 0;
-} 
+}
